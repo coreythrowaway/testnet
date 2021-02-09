@@ -1,0 +1,26 @@
+genesis:
+ chain_id: "testvidulum-1"
+ app_state:
+   staking:
+     params:
+       bond_denom: "uvdl"
+   crisis:
+     constant_fee:
+       denom: "uvdl"
+   gov:
+     deposit_params:
+       min_deposit: [{
+         amount: 10000,
+         denom: "uvdl"
+       }]
+   mint:
+     params:
+       mint_denom: "uvdl"
+accounts:
+  - name: alice
+    coins: ["10000vdl", "1000000uvdl"]
+  - name: bob
+    coins: ["500vdl"]
+validator:
+  name: alice
+  staked: "1000000uvdl"
